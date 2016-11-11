@@ -16,9 +16,9 @@ namespace ChainOfResponsibility
             chainelement1.Calculate(new CalculateObject(10, 5, CalculationType.add));
             Console.WriteLine("Division:");
             chainelement1.Calculate(new CalculateObject(10, 5, CalculationType.div));
-            Console.WriteLine("Muliplikation");
+            Console.WriteLine("Muliplikation:");
             chainelement1.Calculate(new CalculateObject(10, 5, CalculationType.mult));
-            Console.WriteLine("Substraktion");
+            Console.WriteLine("Substraktion:");
             chainelement1.Calculate(new CalculateObject(10, 5, CalculationType.sub));
 
             Console.ReadKey();
