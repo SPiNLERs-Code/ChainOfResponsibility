@@ -12,14 +12,10 @@ namespace ChainOfResponsibility
             IChain chainelement2 = new Subtract() { NextChain = chainelement3 };
             IChain chainelement1 = new Add() { NextChain = chainelement2 };
 
-            CalculateObject calcObject = new CalculateObject()
-            {
-                CalcType = CalculationType.div,
-                FirstNumber = 10,
-                SecondNumbe = 9
-            };
-
-            chainelement1.Calculate(calcObject);
+            chainelement1.Calculate(new CalculateObject(10, 5, CalculationType.add));
+            chainelement1.Calculate(new CalculateObject(10, 5, CalculationType.div));
+            chainelement1.Calculate(new CalculateObject(10, 5, CalculationType.mult));
+            chainelement1.Calculate(new CalculateObject(10, 5, CalculationType.sub));
 
             Console.ReadKey();
         }
